@@ -1,0 +1,26 @@
+# Gradle files
+.gradle
+
+#Generated files
+build/
+
+#Local configuration file (sdk path, etc)
+local.properties
+
+# Intellij
+.idea
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Other files
+/captures
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
