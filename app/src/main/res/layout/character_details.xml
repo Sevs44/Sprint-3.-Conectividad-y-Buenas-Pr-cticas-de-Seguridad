@@ -8,11 +8,22 @@
     android:padding="30dp"
     android:background="@drawable/metal_background">
 
+    <ImageButton
+        android:id="@+id/ibBackButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/ivCharacterImage"
+        android:src="@android:drawable/ic_menu_revert"
+        android:background="false" />
+
+
     <ImageView
         android:id="@+id/ivCharacterImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ibBackButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/trail_image"
