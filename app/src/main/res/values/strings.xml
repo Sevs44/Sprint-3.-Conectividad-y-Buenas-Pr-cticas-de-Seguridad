@@ -7,4 +7,5 @@
     <string name="gender_title">"Género: "</string>
     <string name="origin_title">"Origen: "</string>
     <string name="location_title">"Localización: "</string>
+    <string name="ibBackButton_description">Botón para volver a la actividad anterior</string>
 </resources>
