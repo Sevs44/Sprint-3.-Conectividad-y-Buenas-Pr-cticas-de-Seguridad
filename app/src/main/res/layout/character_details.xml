@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/characterDetails"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    android:background="@drawable/metal_background">
+
+    <ImageView
+        android:id="@+id/ivCharacterImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/trail_image"
+        android:paddingBottom="10dp"
+        android:contentDescription="@string/description_character_image" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/ivCharacterImage"
+        app:cardCornerRadius="8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/ivCharacterImage"
+            android:background="@color/cardview_dark_background"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/tvCharacterNameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="3dp"
+                android:text="@string/name_title"
+                android:textColor="#3DDC84"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCharacterName"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="John Doe"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterNameTitle"
+                app:layout_constraintTop_toTopOf="parent"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterStatusTitle"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                android:text="@string/status_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterNameTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterStatus"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="Vivo"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterStatusTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterNameTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterSpeciesTypeTitle"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                android:text="@string/species_type_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterStatus"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterSpecies"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="Humano"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterSpeciesTypeTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterStatusTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterType"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text=" (Null)"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterSpecies"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterStatusTitle" />
+
+            <TextView
+                android:id="@+id/tvCharacterGenderTitle"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                android:text="@string/gender_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterSpecies"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterGender"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="Hombre"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterGenderTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterSpeciesTypeTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterOriginTitle"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                android:text="@string/origin_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterGenderTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterOrigin"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="Tierra"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterOriginTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterGenderTitle"
+                android:paddingBottom="3dp" />
+
+            <TextView
+                android:id="@+id/tvCharacterLocationTitle"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                android:text="@string/location_title"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterOriginTitle" />
+
+            <TextView
+                android:id="@+id/tvCharacterLocation"
+                android:textSize="20sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#3DDC84"
+                tools:text="Tierra"
+                app:layout_constraintStart_toEndOf="@id/tvCharacterLocationTitle"
+                app:layout_constraintTop_toBottomOf="@id/tvCharacterOriginTitle" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
