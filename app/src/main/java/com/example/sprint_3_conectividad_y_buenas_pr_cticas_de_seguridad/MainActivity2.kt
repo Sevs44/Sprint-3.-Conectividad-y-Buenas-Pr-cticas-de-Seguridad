@@ -34,9 +34,8 @@ class MainActivity2 : AppCompatActivity() {
     }
 
     private fun goBack() {
-        val intent = Intent(this, MainActivity::class.java).also {
-            startActivity(it)
-        }
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
     }
 
 

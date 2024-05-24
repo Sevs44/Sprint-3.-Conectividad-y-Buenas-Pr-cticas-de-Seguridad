@@ -5,7 +5,7 @@ import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 data class Results(
-    @SerializedName("result")
+    @SerializedName("results")
     val characters: List<Character>
 )
 
