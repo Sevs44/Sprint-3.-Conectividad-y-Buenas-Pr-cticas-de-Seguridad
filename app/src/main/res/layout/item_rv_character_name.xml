@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/clItemCharacterName"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="48dp">
 
 
     <TextView
         android:id="@+id/tvCharacterName"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:background="#3DDC84"
         android:padding="15dp"
         app:layout_constraintBottom_toBottomOf="parent"

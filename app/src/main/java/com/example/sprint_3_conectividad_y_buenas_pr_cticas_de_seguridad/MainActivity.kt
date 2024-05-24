@@ -27,17 +27,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.svSearchCharacterByName.clearFocus()
-        binding.svSearchCharacterByName.setOnSearchClickListener(this)
         initRecyclerView()
+
+        binding.ibSearchButton.setOnClickListener(this)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
-
-        searchByCharacterName("rick")
     }
 
     private fun initRecyclerView() {
@@ -91,8 +89,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         Toast.makeText(this, "Algo fué mal", Toast.LENGTH_SHORT).show()
     }
 
-    override fun onClick(p0: View?) {
-        searchByCharacterName(binding.svSearchCharacterByName.query.toString().lowercase())
+    override fun onClick(view: View?) {
+        searchByCharacterName(binding.etSearchCharacterByName.text.toString().lowercase())
     }
 
 }

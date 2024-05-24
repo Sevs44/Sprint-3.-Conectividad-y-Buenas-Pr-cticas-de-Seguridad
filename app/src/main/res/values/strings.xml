@@ -1,11 +1,13 @@
 <resources>
     <string name="app_name">Sprint-3.-Conectividad-y-Buenas-Pr-cticas-de-Seguridad</string>
-    <string name="name_title">"Nombre: "</string>
-    <string name="description_character_image">Imagen del personaje</string>
-    <string name="status_title">"Estado: "</string>
-    <string name="species_type_title">"Especie (subtipo): "</string>
-    <string name="gender_title">"Género: "</string>
-    <string name="origin_title">"Origen: "</string>
-    <string name="location_title">"Localización: "</string>
-    <string name="ibBackButton_description">Botón para volver a la actividad anterior</string>
+    <string name="name_title">"Name: "</string>
+    <string name="description_character_image">Character\'s image</string>
+    <string name="status_title">"Status: "</string>
+    <string name="species_type_title">"Species (subspecies): "</string>
+    <string name="gender_title">"Gender: "</string>
+    <string name="origin_title">"Origin: "</string>
+    <string name="location_title">"Localization: "</string>
+    <string name="ibBackButton_description">Go back button</string>
+    <string name="search_hint">Search…</string>
+    <string name="search_button_description">Search button</string>
 </resources>
