@@ -3,6 +3,7 @@ package com.example.sprint_3_conectividad_y_buenas_pr_cticas_de_seguridad
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         initRecyclerView()
 
         binding.ibSearchButton.setOnClickListener(this)
+        setUpEditText()
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -87,6 +89,22 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
 
     private fun showError() {
         Toast.makeText(this, "Algo fué mal", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun setUpEditText() {
+        binding.etSearchCharacterByName.setOnEditorActionListener { _, actionId, _ ->
+            when (actionId) {
+                EditorInfo.IME_ACTION_DONE -> {
+                    binding.ibSearchButton.performClick()
+                    true
+                }
+
+                else -> {
+                    false
+                }
+            }
+
+        }
     }
 
     override fun onClick(view: View?) {
