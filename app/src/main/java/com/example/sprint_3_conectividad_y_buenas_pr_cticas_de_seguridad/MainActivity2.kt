@@ -22,8 +22,7 @@ class MainActivity2 : AppCompatActivity() {
             goBack()
         }
 
-        val character = intent.getParcelableExtra<Character>("CHARACTER")
-
+        val character = getDetails(intent)
         setDetails(character)
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.characterDetails)) { v, insets ->
@@ -36,6 +35,34 @@ class MainActivity2 : AppCompatActivity() {
     private fun goBack() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+    }
+
+    private fun getDetails(intent: Intent): Character {
+        val name = intent.getStringExtra("NAME")
+        val status = intent.getStringExtra("STATUS")
+        val species = intent.getStringExtra("SPECIES")
+        val subspecies = intent.getStringExtra("SUBSPECIES")
+        val gender = intent.getStringExtra("GENDER")
+        val origin = intent.getStringExtra("ORIGIN")
+        val location = intent.getStringExtra("LOCATION")
+        val image = intent.getStringExtra("IMAGE")
+
+        val character = Character(
+            name = name,
+            status = status,
+            species = species,
+            subspecies = subspecies,
+            gender = gender,
+            origin = Origin(origin, null),
+            location = Location(location, null),
+            image = image,
+
+            url = null,
+            dateCreated = null,
+            id = null,
+            episode = null
+        )
+        return character
     }
 
 

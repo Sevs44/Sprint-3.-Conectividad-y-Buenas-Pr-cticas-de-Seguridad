@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        searchByCharacterName("rick")
     }
 
     private fun initRecyclerView() {
@@ -44,7 +46,16 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         binding.rvListNameCharacters.adapter = adapter
         adapter.onItemClick = {
             val intent = Intent(this, MainActivity2::class.java)
-            intent.putExtra("CHARACTER", it)
+
+            intent.putExtra("NAME", it.name)
+            intent.putExtra("STATUS", it.status)
+            intent.putExtra("SPECIES", it.species)
+            intent.putExtra("SUBSPECIES", it.subspecies)
+            intent.putExtra("GENDER", it.gender)
+            intent.putExtra("ORIGIN", it.origin?.place)
+            intent.putExtra("LOCATION", it.location?.place)
+            intent.putExtra("IMAGE", it.image)
+
             startActivity(intent)
         }
 
